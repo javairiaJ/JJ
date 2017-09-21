@@ -1,0 +1,42 @@
+package com.company;
+
+
+
+
+public class Queue{
+    char []q;
+    private int putloc,getloc;
+
+    public Queue(int x){
+        q=new char[x];
+        int putloc=getloc=0;
+    }
+
+    public char put(char character){
+        if(putloc==q.length-1){
+            System.out.println("  ops  no Space left");
+            return 0 ;
+        }
+        putloc=putloc+1;
+        return q[putloc]=character;
+    }
+
+    public void get(){
+
+
+        if(getloc<putloc||getloc==putloc){
+            System.out.println(q[getloc]);
+            getloc++;
+            return;
+            }
+           if(getloc>putloc){
+               System.out.println("queue is empty");
+               return;
+           }
+        }
+
+    }
+
+
+
+
